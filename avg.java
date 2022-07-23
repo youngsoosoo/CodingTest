@@ -17,6 +17,6 @@ public class avg {
         for (int i = 0; i < a.length; i++) {
             sum += ((a[i] / a[a.length - 1]) * 100);
         }
-
+        System.out.print(sum / a.length);
     }
 }
