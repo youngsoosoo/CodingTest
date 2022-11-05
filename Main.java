@@ -1,28 +1,14 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String a = br.readLine();
+        int b = a.charAt(0);
 
-        String[] a = new String[sc.nextInt()];
-        for (int i = 0; i < a.length; i++) {
-            a[i] = sc.next();
-        }
-        sc.close();
-
-        for(int i=0; i<a.length; i++){
-            int count = 0;
-            int sum =0;
-            for(int j=0; j<a[i].length(); j++){
-                if(a[i].charAt(j)== 'O')
-                    count++;
-                else
-                    count = 0;
-
-                sum += count;
-            }
-            System.out.println(sum);
-        }
+        System.out.println((byte) b);
     }
 }
